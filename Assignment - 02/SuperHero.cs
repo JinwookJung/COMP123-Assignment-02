@@ -10,33 +10,42 @@ namespace Assignment___02
     {
         private string superPower;
 
-        public Hero(string name)
+        public SuperHero(string name)
         {
+            SuperHero mySuperHero = new SuperHero("Jinwook");
             generateRandomPowers();
         }
 
-        private string[] generateRandomPowers()
+        private void generateRandomPowers()
         {
             string[] randomPowers = {"Super Speed", "Super Strength", "Body Armour", "Flight", "Fire Generation", "WeatherControl"};
+            string[] newRandomPowers = new string[3]; 
             
-            Random rnd = new Random();
 
-            
-            int secondRandomNumber = rnd.Next(6);
-            int thirdRandomNumber = rnd.Next(6);
             
             for(int index = 0; index < 3; index++)
             {
-                int firstRandomNumber = rnd.Next(6);
-                string firstRandomPowers = randomPowers[index];
+                Random rnd = new Random();
+                int randomNumber = rnd.Next(6);
                 
-                string secondRandomPowers = randomPowers[index];
-                string thirdRandomPowers = randomPowers[index];
+                if (randomPowers[randomNumber] != "unavailable")
+                {
+                    
+                    newRandomPowers[index] = randomPowers[index];
+                    randomPowers[index] = "Unavailable";
+                    
+                    Console.WriteLine(newRandomPowers[index]);
+                } 
+                
+                
             }
+        }
 
             public void showPowers()
             {
-                Console.WriteLine("Hero's Superpowers are {0}, {1}, {2}",,,);
+               
+                for(int index = 0; index < newRandomPowers.Length; index++ )
+               Console.WriteLine(newRandomPowers[index]);
             }
 
         }
