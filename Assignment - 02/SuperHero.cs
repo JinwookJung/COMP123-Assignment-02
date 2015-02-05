@@ -8,20 +8,18 @@ namespace Assignment___02
 {
     class SuperHero : Hero
     {
-        string[] superPower = { "Super Speed", "Super Strength", "Body Armour", "Flight", "Fire Generation", "WeatherControl" };
-        string[] newRandomSuperPower = new string[3];
-        
+        // 1-a: PRIVATE PROPERTIES
+        private string[] superPower = { "Super Speed", "Super Strength", "Body Armour", "Flight", "Fire Generation", "WeatherControl" };
+        private string[] newRandomSuperPower = new string[3];
+
+        // 1-b: CONSTRUCTOR METHOD
         public SuperHero(string name) : base(name)
         {
-            
             generateRandomPowers();
         }
-
+        // 1-c: generateRandomPowers METHOD
         private void generateRandomPowers()
-        {
-            
-            
-           
+        { 
             for (int index = 0; index < 3; index++)
             {
                 Random rnd = new Random();
@@ -39,7 +37,7 @@ namespace Assignment___02
                 }
             }
         }
-
+        //1-d: public showPowers method
         public void showPowers()
         {
 

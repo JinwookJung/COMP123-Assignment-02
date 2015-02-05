@@ -1,12 +1,4 @@
-﻿/*
- * Author's name: Jinwook Jung
- * Date last Modified : 30 JAN 2015
- * Program description : This program is about class that instentiate a hero who havs three abilities. 
- *                       This program shows hero's ability and damage score when their attempt succeeded when the user entered hero's namee.
- * Revision History: 
-*/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
