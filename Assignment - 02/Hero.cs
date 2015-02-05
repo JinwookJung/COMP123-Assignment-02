@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace assignment___01
+namespace Assignment___02
 {
     class Hero
     {
@@ -23,7 +23,7 @@ namespace assignment___01
 
 
         // 1-c /CONSTRUCTOR METHOD ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        public Hero(string name)
+        public Hero(string name) 
         {
             Console.WriteLine("Hero name is {0}", name);
             generateAbilities();

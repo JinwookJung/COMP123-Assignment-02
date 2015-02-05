@@ -11,7 +11,8 @@ namespace Assignment___02
         static void Main(string[] args)
         {
             SuperHero mySuperHero = new SuperHero("Jinwook");
-            SuperHero.showPowers();
+            mySuperHero.showPowers();
+            mySuperHero.fight();
         }
     }
 }

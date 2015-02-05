@@ -6,48 +6,48 @@ using System.Threading.Tasks;
 
 namespace Assignment___02
 {
-    class SuperHero
+    class SuperHero : Hero
     {
-        private string superPower;
-
-        public SuperHero(string name)
+        string[] superPower = { "Super Speed", "Super Strength", "Body Armour", "Flight", "Fire Generation", "WeatherControl" };
+        string[] newRandomSuperPower = new string[3];
+        
+        public SuperHero(string name) : base(name)
         {
-            SuperHero mySuperHero = new SuperHero("Jinwook");
+            
             generateRandomPowers();
         }
 
         private void generateRandomPowers()
         {
-            string[] randomPowers = {"Super Speed", "Super Strength", "Body Armour", "Flight", "Fire Generation", "WeatherControl"};
-            string[] newRandomPowers = new string[3]; 
             
-
             
-            for(int index = 0; index < 3; index++)
+           
+            for (int index = 0; index < 3; index++)
             {
                 Random rnd = new Random();
                 int randomNumber = rnd.Next(6);
-                
-                if (randomPowers[randomNumber] != "unavailable")
+
+                if (superPower[randomNumber] != "Unavailable")
                 {
-                    
-                    newRandomPowers[index] = randomPowers[index];
-                    randomPowers[index] = "Unavailable";
-                    
-                    Console.WriteLine(newRandomPowers[index]);
-                } 
-                
-                
+                    newRandomSuperPower[index] = superPower[randomNumber];
+                    superPower[randomNumber] = "Unavailable";
+
+                    //Console.WriteLine(newRandomSuperPower[index]);
+
+                }else{
+                    index = index - 1;
+                }
             }
         }
 
-            public void showPowers()
+        public void showPowers()
+        {
+
+            for (int index = 0; index < newRandomSuperPower.Length; index++)
             {
-               
-                for(int index = 0; index < newRandomPowers.Length; index++ )
-               Console.WriteLine(newRandomPowers[index]);
+                Console.WriteLine(newRandomSuperPower[index]);
             }
-
+            
         }
-     }
+    }
 }
