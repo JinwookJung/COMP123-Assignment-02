@@ -19,6 +19,10 @@ namespace Assignment___02
             SuperHero mySuperHero = new SuperHero("Jinwook");
             mySuperHero.showPowers();
             mySuperHero.fight();
+
+            Console.WriteLine();
+            Console.WriteLine("Enter the key to exit");
+            Console.ReadKey();
         }
     }
 }
