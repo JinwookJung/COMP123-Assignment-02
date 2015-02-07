@@ -27,10 +27,9 @@ namespace Assignment___02
 
                 if (superPower[randomNumber] != "Unavailable")
                 {
+
                     newRandomSuperPower[index] = superPower[randomNumber];
                     superPower[randomNumber] = "Unavailable";
-
-                    //Console.WriteLine(newRandomSuperPower[index]);
 
                 }else{
                     index = index - 1;
@@ -43,7 +42,7 @@ namespace Assignment___02
 
             for (int index = 0; index < newRandomSuperPower.Length; index++)
             {
-                Console.WriteLine(newRandomSuperPower[index]);
+                Console.WriteLine("Superpower is {0}",newRandomSuperPower[index]);
             }
             
         }

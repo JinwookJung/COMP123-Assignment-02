@@ -17,7 +17,9 @@ namespace Assignment___02
         // 1-c /CONSTRUCTOR METHOD ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public Hero(string name) 
         {
+            Console.WriteLine("-----------------------");
             Console.WriteLine("Hero name is {0}", name);
+            Console.WriteLine("-----------------------");
             generateAbilities();
         }
         // 1-b /PUBLIC PROPERTY ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
